@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "socket": "node server/index.js",
     "lint": "eslint"
   },
   "dependencies": {
@@ -27,3 +28,4 @@
     "typescript": "^5"
   }
 }
+"socket": "node server/index.js"
