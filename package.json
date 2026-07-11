@@ -28,4 +28,3 @@
     "typescript": "^5"
   }
 }
-"socket": "node server/index.js"
