@@ -1,7 +1,16 @@
 const http = require("http");
 const { Server } = require("socket.io");
 
-const server = http.createServer();
+const server = http.createServer((req, res) => {
+  if (req.url === "/") {
+    res.writeHead(200, { "Content-Type": "text/plain" });
+    res.end("TogetherFrame Socket Server is running! 💙");
+    return;
+  }
+
+  res.writeHead(404);
+  res.end();
+});
 
 const io = new Server(server, {
   cors: {
